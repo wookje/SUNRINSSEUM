@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="kr.hashsoft.sunrinsseum.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_search"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <ImageView
+                android:id="@+id/search_back_btn"
+                android:layout_width="@dimen/app_bar_icon_sz"
+                android:layout_height="@dimen/app_bar_icon_sz"
+                android:background="#00000000"
+                android:src="@drawable/ic_arrow_back_white_48dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="10dp" >
+
+
+                <EditText
+                    android:id="@+id/search_box"
+                    android:layout_width="340dp"
+                    android:layout_height="40dp"
+                    android:paddingLeft="5dp"
+                    android:layout_gravity="right"
+                    android:textColor="#000000"
+                    android:background="#ffffff"/>
+
+                <ImageView
+                    android:id="@+id/search_admit"
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:src="@drawable/ic_search_gray_48dp"
+
+                    android:layout_alignBottom="@id/search_box"
+                    android:layout_alignRight="@id/search_box"
+                    android:layout_alignTop="@id/search_box"
+
+                    android:layout_gravity="right"
+                    android:paddingRight="10dp"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_search"/>
+
+</android.support.design.widget.CoordinatorLayout>
